@@ -126,8 +126,13 @@ BST<T> operator+(BST<T> tree, T) {
 }
 
 template<typename T>
-std::ostream &operator<<(std::ostream &os, BST<T>) {
-	//TODO
+std::ostream &operator<<(std::ostream &os, BST<T> tree) {
+	if (tree.empty()) {
+		return os;
+	}
+	os << tree.left();
+	os << tree.value() << ' ';
+	os << tree.right();
 	return os;
 }
 

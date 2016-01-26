@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d0d9bd8-748d-43ae-9770-3af4b14dedc5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bst_imp.h" afterPath="$PROJECT_DIR$/bst_imp.h" />
     </list>
     <ignored path="jnp1-zadanie7.iws" />
@@ -47,8 +46,8 @@
       <file leaf-file-name="bst_imp.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bst_imp.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45257142">
-              <caret line="106" column="59" selection-start-line="106" selection-start-column="59" selection-end-line="106" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.576">
+              <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
               <folding>
                 <element signature="e#166#178#0" expanded="true" />
                 <element signature="e#239#251#0" expanded="true" />
@@ -69,7 +68,7 @@
                 <element signature="e#2220#2232#0" expanded="true" />
                 <element signature="e#2301#2313#0" expanded="true" />
                 <element signature="e#2382#2394#0" expanded="true" />
-                <element signature="e#2479#2491#0" expanded="true" />
+                <element signature="e#2582#2594#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,8 +233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bst_imp.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45257142">
-          <caret line="106" column="59" selection-start-line="106" selection-start-column="59" selection-end-line="106" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.576">
+          <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
           <folding>
             <element signature="e#166#178#0" expanded="true" />
             <element signature="e#239#251#0" expanded="true" />
@@ -256,7 +255,7 @@
             <element signature="e#2220#2232#0" expanded="true" />
             <element signature="e#2301#2313#0" expanded="true" />
             <element signature="e#2382#2394#0" expanded="true" />
-            <element signature="e#2479#2491#0" expanded="true" />
+            <element signature="e#2582#2594#0" expanded="true" />
           </folding>
         </state>
       </provider>
