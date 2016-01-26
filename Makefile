@@ -1,14 +1,12 @@
-#COMPILER=g++
-COMPILER=clang++-3.7
-CFLAGS=-Wall -Wunused -Wshadow -pedantic -O2 -std=c++11 -g
+COMPILER=g++
+#CFLAGS=-Wall -Wunused -Wshadow -pedantic -std=c++11 -g -fsanitize=address -O3 -fno-omit-frame-pointer -g
+CFLAGS=-Wall -Wunused -Wshadow -pedantic -O3 -std=c++11 -g
 
-all: example example2
+all: example1 example2 example3
 
-example: example.cpp bst.h bst_imp.h
-	$(COMPILER) $(CFLAGS) -o $@ example.cpp
-
-example2: sample_bst_usage.cpp bst.h bst_imp.h
-	$(COMPILER) $(CFLAGS) -o $@ sample_bst_usage.cpp
+example%: example%.cpp bst.h bst_imp.h
+	echo $(CFLAGS)
+	$(COMPILER) $(CFLAGS) -o $@ $@.cpp
 
 clean:
-	rm -f example
+	rm -f example example1 example2 example3

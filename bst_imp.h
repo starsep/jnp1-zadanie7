@@ -32,7 +32,8 @@ static BST<T> build_tree(Iter begin, Iter end) {
 
 template<typename T>
 template<typename Iter>
-BST<T>::BST(Iter begin, Iter end) : m_root(build_tree<T, Iter>(begin, end).m_root) {
+BST<T>::BST(Iter begin, Iter end) :
+	m_root(build_tree<T, Iter>(begin, end).m_root) {
 }
 
 template<typename T>
@@ -82,7 +83,8 @@ T const &BST<T>::min() const {
 	if (empty()) {
 		throw std::logic_error("BST::min(): Empty BST");
 	}
-	return left().empty() ? value() : left().min();
+	BST<T> l(left());
+	return l.empty() ? value() : l.min();
 }
 
 template<typename T>
@@ -90,7 +92,8 @@ T const &BST<T>::max() const {
 	if (empty()) {
 		throw std::logic_error("BST::max(): Empty BST");
 	}
-	return right().empty() ? value() : right().max();
+	BST<T> r(right());
+	return r.empty() ? value() : r.max();
 }
 
 template<typename T>
