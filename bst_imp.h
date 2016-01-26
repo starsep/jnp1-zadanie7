@@ -138,8 +138,14 @@ std::ostream &operator<<(std::ostream &os, BST<T> tree) {
 
 template<typename T>
 T max_diff(BST<T> tree) {
+	//faster than checking tree.size() < 2
+	if (tree.empty() || (tree.left().empty() && tree.right().empty())) {
+		throw std::logic_error("max_diff(): BST.size() < 2");
+	}
+	BST<T> sorted = spine(tree);
+	T result = sorted.value() - sorted.left().value();
 	//TODO
-	return tree.value();
+	return result;
 }
 
 #endif //BST_IMP_H

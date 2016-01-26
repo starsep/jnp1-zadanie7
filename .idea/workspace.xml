@@ -46,8 +46,8 @@
       <file leaf-file-name="bst_imp.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bst_imp.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21251476">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.53246754">
+              <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
               <folding>
                 <element signature="e#166#178#0" expanded="true" />
                 <element signature="e#271#283#0" expanded="true" />
@@ -233,8 +233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bst_imp.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21251476">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.53246754">
+          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
           <folding>
             <element signature="e#166#178#0" expanded="true" />
             <element signature="e#271#283#0" expanded="true" />
