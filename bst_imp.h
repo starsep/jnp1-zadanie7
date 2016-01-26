@@ -133,24 +133,26 @@ std::size_t BST<T>::height() const {
 
 template<typename T>
 BST<T> spine(BST<T> tree) {
-	//TODO
-	return tree;
+	auto add_element_to_spine = [](BST<T> acc, T element) {
+		return BST<T>(element, acc, BST<T>());
+	};
+	return tree.fold(BST<T>(), add_element_to_spine);
 }
 
 template<typename T>
-BST<T> operator+(T t, BST<T> tree) {
-	return tree + t;
+BST<T> operator+(T element, BST<T> tree) {
+	return tree + element;
 }
 
 template<typename T>
-BST<T> operator+(BST<T> tree, T t) {
+BST<T> operator+(BST<T> tree, T element) {
 	if (tree.empty()) {
-		return BST<T>(t, BST<T>(), BST<T>());
+		return BST<T>(element, BST<T>(), BST<T>());
 	}
-	if (t <= tree.value()) {
-		return BST<T>(tree.value(), tree.left() + t, tree.right());
+	if (element <= tree.value()) {
+		return BST<T>(tree.value(), tree.left() + element, tree.right());
 	}
-	return BST<T>(tree.value(), tree.left(), tree.right() + t);
+	return BST<T>(tree.value(), tree.left(), tree.right() + element);
 }
 
 template<typename T>
