@@ -5,6 +5,7 @@
 #define BST_IMP_H
 
 #include "bst.h"
+#include <exception>
 
 template<typename T>
 BST<T>::BST(std::initializer_list <T>) {
@@ -18,44 +19,61 @@ BST<T>::BST(Iter, Iter) {
 }
 
 template<typename T>
-BST<T>::BST(T value, BST<T> left, BST<T> right) {
-	//TODO
+BST<T>::BST(T value, BST<T> left, BST<T> right) :
+	m_root(std::make_shared<const Node>(Node(value, left.m_root, right.m_root))) {
 }
 
 template<typename T>
 BST<T> BST<T>::left() const {
-	//TODO
-	return *this;
+	if (empty()) {
+		throw std::logic_error("BST::left(): Empty BST");
+	}
+	const NodePtr &l = m_root->m_left;
+	if (l == nullptr) {
+		return BST<T>();
+	}
+	return BST<T>(l->m_value, l->m_left, l->m_right);
 }
 
 template<typename T>
 BST<T> BST<T>::right() const {
-	//TODO
-	return *this;
+	if (empty()) {
+		throw std::logic_error("BST::right(): Empty BST");
+	}
+	const NodePtr &r = m_root->m_right;
+	if (r == nullptr) {
+		return BST<T>();
+	}
+	return BST<T>(r->m_value, r->m_left, r->m_right);
 }
 
 template<typename T>
 T const &BST<T>::value() const {
-	//TODO
+	if (empty()) {
+		throw std::logic_error("BST::value(): Empty BST");
+	}
 	return m_root->m_value;
 }
 
 template<typename T>
 bool BST<T>::empty() const {
-	//TODO
-	return true;
+	return m_root == nullptr;
 }
 
 template<typename T>
 T const &BST<T>::min() const {
-	//TODO
-	return m_root->m_value;
+	if (empty()) {
+		throw std::logic_error("BST::min(): Empty BST");
+	}
+	return left().empty() ? value() : left().min();
 }
 
 template<typename T>
 T const &BST<T>::max() const {
-	//TODO
-	return m_root->m_value;
+	if (empty()) {
+		throw std::logic_error("BST::max(): Empty BST");
+	}
+	return right().empty() ? value() : right().max();
 }
 
 template<typename T>
@@ -67,20 +85,26 @@ Acc BST<T>::fold(Acc a, Functor f) const {
 
 template<typename T>
 BST<T> BST<T>::find(T const &t) const {
-	//TODO
-	return *this;
+	if (empty()) {
+		return BST<T>();
+	}
+	return (t < value()) ? left().find(t) : right().find(t);
 }
 
 template<typename T>
 std::size_t BST<T>::size() const {
-	//TODO
-	return 0;
+	if (empty()) {
+		return 0;
+	}
+	return 1 + left().size() + right().size();
 }
 
 template<typename T>
 std::size_t BST<T>::height() const {
-	//TODO
-	return 0;
+	if (empty()) {
+		return 0;
+	}
+	return 1 + std::max(left().height(), right().height());
 }
 
 template<typename T>
