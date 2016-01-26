@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d0d9bd8-748d-43ae-9770-3af4b14dedc5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bst_imp.h" afterPath="$PROJECT_DIR$/bst_imp.h" />
     </list>
     <ignored path="jnp1-zadanie7.iws" />
@@ -46,32 +45,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bst_imp.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bst_imp.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bst_imp.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.857142">
-              <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.69942856">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="33" />
               <folding>
                 <element signature="e#166#178#0" expanded="true" />
-                <element signature="e#271#283#0" expanded="true" />
-                <element signature="e#292#307#0" expanded="true" />
-                <element signature="e#418#430#0" expanded="true" />
-                <element signature="e#572#584#0" expanded="true" />
-                <element signature="e#827#839#0" expanded="true" />
-                <element signature="e#1085#1097#0" expanded="true" />
-                <element signature="e#1239#1251#0" expanded="true" />
-                <element signature="e#1319#1331#0" expanded="true" />
-                <element signature="e#1493#1505#0" expanded="true" />
-                <element signature="e#1669#1681#0" expanded="true" />
-                <element signature="e#1690#1722#0" expanded="true" />
-                <element signature="e#1908#1920#0" expanded="true" />
-                <element signature="e#2108#2120#0" expanded="true" />
-                <element signature="e#2242#2254#0" expanded="true" />
-                <element signature="e#2391#2403#0" expanded="true" />
-                <element signature="e#2465#2477#0" expanded="true" />
-                <element signature="e#2544#2556#0" expanded="true" />
-                <element signature="e#2821#2833#0" expanded="true" />
-                <element signature="e#3021#3033#0" expanded="true" />
+                <element signature="e#272#287#0" expanded="true" />
+                <element signature="e#482#509#0" expanded="true" />
+                <element signature="e#733#745#0" expanded="true" />
+                <element signature="e#754#769#0" expanded="true" />
+                <element signature="e#866#878#0" expanded="true" />
+                <element signature="e#1020#1032#0" expanded="true" />
+                <element signature="e#1275#1287#0" expanded="true" />
+                <element signature="e#1533#1545#0" expanded="true" />
+                <element signature="e#1687#1699#0" expanded="true" />
+                <element signature="e#1767#1779#0" expanded="true" />
+                <element signature="e#1941#1953#0" expanded="true" />
+                <element signature="e#2117#2129#0" expanded="true" />
+                <element signature="e#2138#2170#0" expanded="true" />
+                <element signature="e#2356#2368#0" expanded="true" />
+                <element signature="e#2556#2568#0" expanded="true" />
+                <element signature="e#2690#2702#0" expanded="true" />
+                <element signature="e#2839#2851#0" expanded="true" />
+                <element signature="e#2913#2925#0" expanded="true" />
+                <element signature="e#2992#3004#0" expanded="true" />
+                <element signature="e#3269#3281#0" expanded="true" />
+                <element signature="e#3469#3481#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample_bst_usage.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sample_bst_usage.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample_bst_usage.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18514286">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -180,6 +181,21 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Build All">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="jnp_zadanie7" TARGET_NAME="example1" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="jnp_zadanie7" TARGET_NAME="example1" CONFIG_NAME="Debug">
       <envs />
       <method />
@@ -257,35 +273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bst_imp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.857142">
-          <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
-          <folding>
-            <element signature="e#166#178#0" expanded="true" />
-            <element signature="e#271#283#0" expanded="true" />
-            <element signature="e#292#307#0" expanded="true" />
-            <element signature="e#418#430#0" expanded="true" />
-            <element signature="e#572#584#0" expanded="true" />
-            <element signature="e#827#839#0" expanded="true" />
-            <element signature="e#1085#1097#0" expanded="true" />
-            <element signature="e#1239#1251#0" expanded="true" />
-            <element signature="e#1319#1331#0" expanded="true" />
-            <element signature="e#1493#1505#0" expanded="true" />
-            <element signature="e#1669#1681#0" expanded="true" />
-            <element signature="e#1690#1722#0" expanded="true" />
-            <element signature="e#1908#1920#0" expanded="true" />
-            <element signature="e#2108#2120#0" expanded="true" />
-            <element signature="e#2242#2254#0" expanded="true" />
-            <element signature="e#2391#2403#0" expanded="true" />
-            <element signature="e#2465#2477#0" expanded="true" />
-            <element signature="e#2544#2556#0" expanded="true" />
-            <element signature="e#2821#2833#0" expanded="true" />
-            <element signature="e#3021#3033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -296,9 +283,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sample_bst_usage.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18514286">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bst_imp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69942856">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="33" />
+          <folding>
+            <element signature="e#166#178#0" expanded="true" />
+            <element signature="e#272#287#0" expanded="true" />
+            <element signature="e#482#509#0" expanded="true" />
+            <element signature="e#733#745#0" expanded="true" />
+            <element signature="e#754#769#0" expanded="true" />
+            <element signature="e#866#878#0" expanded="true" />
+            <element signature="e#1020#1032#0" expanded="true" />
+            <element signature="e#1275#1287#0" expanded="true" />
+            <element signature="e#1533#1545#0" expanded="true" />
+            <element signature="e#1687#1699#0" expanded="true" />
+            <element signature="e#1767#1779#0" expanded="true" />
+            <element signature="e#1941#1953#0" expanded="true" />
+            <element signature="e#2117#2129#0" expanded="true" />
+            <element signature="e#2138#2170#0" expanded="true" />
+            <element signature="e#2356#2368#0" expanded="true" />
+            <element signature="e#2556#2568#0" expanded="true" />
+            <element signature="e#2690#2702#0" expanded="true" />
+            <element signature="e#2839#2851#0" expanded="true" />
+            <element signature="e#2913#2925#0" expanded="true" />
+            <element signature="e#2992#3004#0" expanded="true" />
+            <element signature="e#3269#3281#0" expanded="true" />
+            <element signature="e#3469#3481#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,10 +12,27 @@ BST<T>::BST(std::initializer_list<T> list) :
 	BST<T>(list.begin(), list.end()) {
 }
 
+template <typename Iter>
+static BST<Iter> build_iter_tree(Iter begin, Iter end) {
+	if (begin == end) {
+		return BST<Iter>();
+	}
+	Iter element = begin;
+	begin++;
+	return build_iter_tree(begin, end) + element;
+}
+
+template<typename T, typename Iter>
+static BST<T> build_tree(Iter begin, Iter end) {
+	auto add_element_to_tree = [](BST<T> tree, Iter iter) {
+		return tree + *iter;
+	};
+	return build_iter_tree<Iter>(begin, end).fold(BST<T>(), add_element_to_tree);
+}
+
 template<typename T>
 template<typename Iter>
-BST<T>::BST(Iter begin, Iter end) /*: m_root(fold(BST<T>(), build_bst<T>(begin, end)).m_root)*/ {
-
+BST<T>::BST(Iter begin, Iter end) : m_root(build_tree<T, Iter>(begin, end).m_root) {
 }
 
 template<typename T>
