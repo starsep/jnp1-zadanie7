@@ -8,8 +8,8 @@
 #include <exception>
 
 template<typename T>
-BST<T>::BST(std::initializer_list <T>) {
-	//TODO
+BST<T>::BST(std::initializer_list<T> list) :
+	BST<T>(list.begin(), list.end()) {
 }
 
 template<typename T>
