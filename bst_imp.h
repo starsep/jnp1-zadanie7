@@ -14,8 +14,8 @@ BST<T>::BST(std::initializer_list<T> list) :
 
 template<typename T>
 template<typename Iter>
-BST<T>::BST(Iter, Iter) {
-	//TODO
+BST<T>::BST(Iter begin, Iter end) /*: m_root(fold(BST<T>(), build_bst<T>(begin, end)).m_root)*/ {
+
 }
 
 template<typename T>
@@ -79,14 +79,21 @@ T const &BST<T>::max() const {
 template<typename T>
 template<typename Acc, typename Functor>
 Acc BST<T>::fold(Acc a, Functor f) const {
-	//TODO
-	return *this;
+	if (empty()) {
+		return a;
+	}
+	Acc fold_left = left().fold(a, f);
+	Acc acc = f(fold_left, value());
+	return right().fold(acc, f);
 }
 
 template<typename T>
 BST<T> BST<T>::find(T const &t) const {
 	if (empty()) {
 		return BST<T>();
+	}
+	if (value() == t) {
+		return *this;
 	}
 	return (t < value()) ? left().find(t) : right().find(t);
 }
@@ -114,15 +121,19 @@ BST<T> spine(BST<T> tree) {
 }
 
 template<typename T>
-BST<T> operator+(T, BST<T> tree) {
-	//TODO
-	return tree;
+BST<T> operator+(T t, BST<T> tree) {
+	return tree + t;
 }
 
 template<typename T>
-BST<T> operator+(BST<T> tree, T) {
-	//TODO
-	return tree;
+BST<T> operator+(BST<T> tree, T t) {
+	if (tree.empty()) {
+		return BST<T>(t, BST<T>(), BST<T>());
+	}
+	if (t <= tree.value()) {
+		return BST<T>(tree.value(), tree.left() + t, tree.right());
+	}
+	return BST<T>(tree.value(), tree.left(), tree.right() + t);
 }
 
 template<typename T>
@@ -142,10 +153,11 @@ T max_diff(BST<T> tree) {
 	if (tree.empty() || (tree.left().empty() && tree.right().empty())) {
 		throw std::logic_error("max_diff(): BST.size() < 2");
 	}
-	BST<T> sorted = spine(tree);
-	T result = sorted.value() - sorted.left().value();
-	//TODO
-	return result;
+	auto find_max_diff = [](std::pair<T, T> acc, T t) {
+		return std::make_pair(std::max(acc.first, t - acc.second), t);
+	};
+	T min = tree.min();
+	return tree.fold(std::make_pair(min - min, tree.min()), find_max_diff).first;
 }
 
 #endif //BST_IMP_H

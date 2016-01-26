@@ -1,9 +1,13 @@
-COMPILER=g++
+#COMPILER=g++
+COMPILER=clang++-3.7
 CFLAGS=-Wall -Wunused -Wshadow -pedantic -O2 -std=c++11 -g
 
-all: example
+all: example example2
 
-example: sample_bst_usage.cpp bst.h bst_imp.h
+example: example.cpp bst.h bst_imp.h
+	$(COMPILER) $(CFLAGS) -o $@ example.cpp
+
+example2: sample_bst_usage.cpp bst.h bst_imp.h
 	$(COMPILER) $(CFLAGS) -o $@ sample_bst_usage.cpp
 
 clean:
