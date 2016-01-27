@@ -46,11 +46,7 @@ BST<T> BST<T>::left() const {
 	if (empty()) {
 		throw std::logic_error("BST::left(): Empty BST");
 	}
-	const NodePtr &l = m_root->m_left;
-	if (l == nullptr) {
-		return BST<T>();
-	}
-	return BST<T>(l->m_value, l->m_left, l->m_right);
+	return BST<T>(m_root->m_left);
 }
 
 template<typename T>
@@ -58,11 +54,7 @@ BST<T> BST<T>::right() const {
 	if (empty()) {
 		throw std::logic_error("BST::right(): Empty BST");
 	}
-	const NodePtr &r = m_root->m_right;
-	if (r == nullptr) {
-		return BST<T>();
-	}
-	return BST<T>(r->m_value, r->m_left, r->m_right);
+	return BST<T>(m_root->m_right);
 }
 
 template<typename T>
