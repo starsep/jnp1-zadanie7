@@ -6,7 +6,6 @@ CFLAGS=-Wall -Wunused -Wshadow -pedantic -O3 -std=c++11 -g
 all: example1 example2 example3 example4
 
 example%: example%.cpp bst.h bst_imp.h very_long_int.o
-	echo $(CFLAGS)
 	$(COMPILER) $(CFLAGS) -o $@ $@.cpp very_long_int.o
 
 very_long_int.o: VeryLongInt/very_long_int.h VeryLongInt/very_long_int.cc
