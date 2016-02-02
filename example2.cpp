@@ -54,7 +54,7 @@ int main() {
     std::cout << bst.height() << std::endl; // prints 4
     std::cout << spine(bst).height() << std::endl; // prints 6
     std::cout << bst.find(4) << std::endl; // prints 4 7
-    std::cout << bst.find(11) << std::endl; //prints nothing (possibly one space)
+    //std::cout << bst.find(11) << std::endl; //prints nothing (possibly one space)
     std::cout << max_diff(bst) << std::endl; //prints 3
 
     return 0;

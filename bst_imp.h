@@ -102,7 +102,7 @@ Acc BST<T>::fold(Acc a, Functor f) const {
 template<typename T>
 BST<T> BST<T>::find(T const &t) const {
 	if (empty()) {
-		return BST<T>();
+		throw std::logic_error("BST::find(): Empty BST");
 	}
 	if (value() == t) {
 		return *this;
