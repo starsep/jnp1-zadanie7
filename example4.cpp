@@ -140,9 +140,11 @@ void test() {
 
 int main() {
 	srand(seed);
-	test<int>();
-	test<double>();
-	test<VeryLongInt>();
+	for (int i = 0; i < TRIES; i++) {
+		test<int>();
+		test<double>();
+		test<VeryLongInt>();
+	}
 	return 0;
 }
 
